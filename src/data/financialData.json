@@ -1,0 +1,210 @@
+{
+  "title": "Quarterly Financial Report",
+  "rowDimension": {
+    "id": "period",
+    "title": "Period",
+    "hierarchy": ["Quarter", "Month", "Week"],
+    "width": 220
+  },
+  "columnDimensions": [
+    {
+      "id": "regions",
+      "title": "Regions",
+      "canCollapse": true,
+      "collapsedWidth": 200,
+      "columns": [
+        {
+          "id": "americas",
+          "title": "Americas",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "usa", "title": "Brazil", "width": 90 },
+            { "id": "can", "title": "Argentina", "width": 90 },
+            { "id": "mex", "title": "Mexico", "width": 90 }
+          ]
+        },
+        {
+          "id": "emea",
+          "title": "EMEA",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "gbr", "title": "UK", "width": 90 },
+            { "id": "deu", "title": "Germany", "width": 90 },
+            { "id": "fra", "title": "France", "width": 90 }
+          ]
+        },
+        {
+          "id": "apac",
+          "title": "APAC",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "chn", "title": "China", "width": 90 },
+            { "id": "jpn", "title": "Japan", "width": 90 },
+            { "id": "aus", "title": "Australia", "width": 90 }
+          ]
+        }
+      ]
+    }
+  ],
+  "metric": {
+    "id": "revenue",
+    "title": "Revenue",
+    "format": "currency",
+    "currencySymbol": "USD"
+  },
+  "totalMetric": {
+     "id": "percentageOfTotal",
+     "title": "% of Total",
+     "format": "percentage",
+     "width": 150
+  },
+  "rowData": [
+    {
+      "id": "Q1", "label": "Q1 2024",
+      "values": { "americas": { "usa": 150, "can": 100, "mex": 50 }, "emea": { "gbr": 100, "deu": 90, "fra": 60 }, "apac": { "chn": 90, "jpn": 70, "aus": 40 } },
+      "children": [
+        { 
+          "id": "Q1-Jan", "label": "January", 
+          "values": { "americas": { "usa": 50, "can": 30, "mex": 20 }, "emea": { "gbr": 35, "deu": 25, "fra": 20 }, "apac": { "chn": 30, "jpn": 25, "aus": 15 } },
+          "children": [
+            { "id": "Q1-Jan-W1", "label": "Week 1", "values": { "americas": { "usa": 12, "can": 8, "mex": 5 }, "emea": { "gbr": 9, "deu": 6, "fra": 5 }, "apac": { "chn": 8, "jpn": 6, "aus": 4 } } },
+            { "id": "Q1-Jan-W2", "label": "Week 2", "values": { "americas": { "usa": 13, "can": 9, "mex": 6 }, "emea": { "gbr": 10, "deu": 7, "fra": 5 }, "apac": { "chn": 8, "jpn": 7, "aus": 4 } } },
+            { "id": "Q1-Jan-W3", "label": "Week 3", "values": { "americas": { "usa": 12, "can": 7, "mex": 5 }, "emea": { "gbr": 8, "deu": 6, "fra": 5 }, "apac": { "chn": 7, "jpn": 6, "aus": 3 } } },
+            { "id": "Q1-Jan-W4", "label": "Week 4", "values": { "americas": { "usa": 13, "can": 6, "mex": 4 }, "emea": { "gbr": 8, "deu": 6, "fra": 5 }, "apac": { "chn": 7, "jpn": 6, "aus": 4 } } }
+          ]
+        },
+        { 
+          "id": "Q1-Feb", "label": "February", 
+          "values": { "americas": { "usa": 60, "can": 40, "mex": 20 }, "emea": { "gbr": 35, "deu": 30, "fra": 25 }, "apac": { "chn": 35, "jpn": 25, "aus": 20 } },
+          "children": [
+            { "id": "Q1-Feb-W1", "label": "Week 1", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 9, "deu": 8, "fra": 6 }, "apac": { "chn": 9, "jpn": 6, "aus": 5 } } },
+            { "id": "Q1-Feb-W2", "label": "Week 2", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 9, "deu": 7, "fra": 6 }, "apac": { "chn": 9, "jpn": 6, "aus": 5 } } },
+            { "id": "Q1-Feb-W3", "label": "Week 3", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 8, "deu": 8, "fra": 6 }, "apac": { "chn": 8, "jpn": 7, "aus": 5 } } },
+            { "id": "Q1-Feb-W4", "label": "Week 4", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 9, "deu": 7, "fra": 7 }, "apac": { "chn": 9, "jpn": 6, "aus": 5 } } }
+          ]
+        },
+        { 
+          "id": "Q1-Mar", "label": "March", 
+          "values": { "americas": { "usa": 40, "can": 30, "mex": 10 }, "emea": { "gbr": 30, "deu": 35, "fra": 15 }, "apac": { "chn": 25, "jpn": 20, "aus": 5 } },
+          "children": [
+            { "id": "Q1-Mar-W1", "label": "Week 1", "values": { "americas": { "usa": 10, "can": 8, "mex": 2 }, "emea": { "gbr": 8, "deu": 9, "fra": 4 }, "apac": { "chn": 6, "jpn": 5, "aus": 1 } } },
+            { "id": "Q1-Mar-W2", "label": "Week 2", "values": { "americas": { "usa": 10, "can": 7, "mex": 3 }, "emea": { "gbr": 7, "deu": 9, "fra": 4 }, "apac": { "chn": 7, "jpn": 5, "aus": 1 } } },
+            { "id": "Q1-Mar-W3", "label": "Week 3", "values": { "americas": { "usa": 10, "can": 8, "mex": 2 }, "emea": { "gbr": 8, "deu": 8, "fra": 3 }, "apac": { "chn": 6, "jpn": 5, "aus": 2 } } },
+            { "id": "Q1-Mar-W4", "label": "Week 4", "values": { "americas": { "usa": 10, "can": 7, "mex": 3 }, "emea": { "gbr": 7, "deu": 9, "fra": 4 }, "apac": { "chn": 6, "jpn": 5, "aus": 1 } } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q2", "label": "Q2 2024", 
+      "values": { "americas": { "usa": 225, "can": 150, "mex": 75 }, "emea": { "gbr": 150, "deu": 130, "fra": 100 }, "apac": { "chn": 140, "jpn": 110, "aus": 70 } },
+      "children": [ 
+          { 
+            "id": "Q2-Apr", "label": "April", 
+            "values": { "americas": { "usa": 75, "can": 50, "mex": 25 }, "emea": { "gbr": 50, "deu": 45, "fra": 35 }, "apac": { "chn": 45, "jpn": 35, "aus": 20 } }, 
+            "children": [
+              { "id": "Q2-Apr-W1", "label": "Week 1", "values": { "americas": { "usa": 19, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 11, "fra": 9 }, "apac": { "chn": 11, "jpn": 9, "aus": 5 } } },
+              { "id": "Q2-Apr-W2", "label": "Week 2", "values": { "americas": { "usa": 19, "can": 13, "mex": 7 }, "emea": { "gbr": 13, "deu": 12, "fra": 9 }, "apac": { "chn": 12, "jpn": 9, "aus": 5 } } },
+              { "id": "Q2-Apr-W3", "label": "Week 3", "values": { "americas": { "usa": 18, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 11, "fra": 8 }, "apac": { "chn": 11, "jpn": 8, "aus": 5 } } },
+              { "id": "Q2-Apr-W4", "label": "Week 4", "values": { "americas": { "usa": 19, "can": 13, "mex": 6 }, "emea": { "gbr": 13, "deu": 11, "fra": 9 }, "apac": { "chn": 11, "jpn": 9, "aus": 5 } } }
+            ]
+          },
+          { 
+            "id": "Q2-May", "label": "May", 
+            "values": { "americas": { "usa": 75, "can": 50, "mex": 25 }, "emea": { "gbr": 50, "deu": 45, "fra": 35 }, "apac": { "chn": 50, "jpn": 40, "aus": 25 } }, 
+            "children": [
+              { "id": "Q2-May-W1", "label": "Week 1", "values": { "americas": { "usa": 19, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 11, "fra": 9 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q2-May-W2", "label": "Week 2", "values": { "americas": { "usa": 19, "can": 13, "mex": 7 }, "emea": { "gbr": 13, "deu": 12, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 7 } } },
+              { "id": "Q2-May-W3", "label": "Week 3", "values": { "americas": { "usa": 18, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 11, "fra": 8 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q2-May-W4", "label": "Week 4", "values": { "americas": { "usa": 19, "can": 13, "mex": 6 }, "emea": { "gbr": 13, "deu": 11, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 6 } } }
+            ]
+          },
+          { 
+            "id": "Q2-Jun", "label": "June", 
+            "values": { "americas": { "usa": 75, "can": 50, "mex": 25 }, "emea": { "gbr": 50, "deu": 40, "fra": 30 }, "apac": { "chn": 45, "jpn": 35, "aus": 25 } }, 
+            "children": [
+              { "id": "Q2-Jun-W1", "label": "Week 1", "values": { "americas": { "usa": 19, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 10, "fra": 7 }, "apac": { "chn": 11, "jpn": 9, "aus": 6 } } },
+              { "id": "Q2-Jun-W2", "label": "Week 2", "values": { "americas": { "usa": 19, "can": 13, "mex": 7 }, "emea": { "gbr": 13, "deu": 10, "fra": 8 }, "apac": { "chn": 12, "jpn": 9, "aus": 7 } } },
+              { "id": "Q2-Jun-W3", "label": "Week 3", "values": { "americas": { "usa": 18, "can": 12, "mex": 6 }, "emea": { "gbr": 12, "deu": 10, "fra": 7 }, "apac": { "chn": 11, "jpn": 8, "aus": 6 } } },
+              { "id": "Q2-Jun-W4", "label": "Week 4", "values": { "americas": { "usa": 19, "can": 13, "mex": 6 }, "emea": { "gbr": 13, "deu": 10, "fra": 8 }, "apac": { "chn": 11, "jpn": 9, "aus": 6 } } }
+            ]
+          }
+      ]
+    },
+     {
+      "id": "Q3", "label": "Q3 2024", 
+      "values": { "americas": { "usa": 190, "can": 120, "mex": 70 }, "emea": { "gbr": 170, "deu": 150, "fra": 100 }, "apac": { "chn": 150, "jpn": 120, "aus": 80 } },
+      "children": [ 
+          { 
+            "id": "Q3-Jul", "label": "July", 
+            "values": { "americas": { "usa": 60, "can": 40, "mex": 20 }, "emea": { "gbr": 55, "deu": 50, "fra": 35 }, "apac": { "chn": 50, "jpn": 40, "aus": 25 } }, 
+            "children": [
+              { "id": "Q3-Jul-W1", "label": "Week 1", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 14, "deu": 12, "fra": 9 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q3-Jul-W2", "label": "Week 2", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 14, "deu": 13, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 7 } } },
+              { "id": "Q3-Jul-W3", "label": "Week 3", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 13, "deu": 12, "fra": 8 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q3-Jul-W4", "label": "Week 4", "values": { "americas": { "usa": 15, "can": 10, "mex": 5 }, "emea": { "gbr": 14, "deu": 13, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 6 } } }
+            ]
+          },
+          { 
+            "id": "Q3-Aug", "label": "August", 
+            "values": { "americas": { "usa": 70, "can": 45, "mex": 25 }, "emea": { "gbr": 60, "deu": 55, "fra": 35 }, "apac": { "chn": 50, "jpn": 40, "aus": 30 } }, 
+            "children": [
+              { "id": "Q3-Aug-W1", "label": "Week 1", "values": { "americas": { "usa": 17, "can": 11, "mex": 6 }, "emea": { "gbr": 15, "deu": 14, "fra": 9 }, "apac": { "chn": 12, "jpn": 10, "aus": 7 } } },
+              { "id": "Q3-Aug-W2", "label": "Week 2", "values": { "americas": { "usa": 18, "can": 12, "mex": 7 }, "emea": { "gbr": 15, "deu": 14, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 8 } } },
+              { "id": "Q3-Aug-W3", "label": "Week 3", "values": { "americas": { "usa": 17, "can": 11, "mex": 6 }, "emea": { "gbr": 15, "deu": 13, "fra": 8 }, "apac": { "chn": 12, "jpn": 10, "aus": 7 } } },
+              { "id": "Q3-Aug-W4", "label": "Week 4", "values": { "americas": { "usa": 18, "can": 11, "mex": 6 }, "emea": { "gbr": 15, "deu": 14, "fra": 9 }, "apac": { "chn": 13, "jpn": 10, "aus": 8 } } }
+            ]
+          },
+          { 
+            "id": "Q3-Sep", "label": "September", 
+            "values": { "americas": { "usa": 60, "can": 35, "mex": 25 }, "emea": { "gbr": 55, "deu": 45, "fra": 30 }, "apac": { "chn": 50, "jpn": 40, "aus": 25 } }, 
+            "children": [
+              { "id": "Q3-Sep-W1", "label": "Week 1", "values": { "americas": { "usa": 15, "can": 9, "mex": 6 }, "emea": { "gbr": 14, "deu": 11, "fra": 7 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q3-Sep-W2", "label": "Week 2", "values": { "americas": { "usa": 15, "can": 9, "mex": 7 }, "emea": { "gbr": 14, "deu": 12, "fra": 8 }, "apac": { "chn": 13, "jpn": 10, "aus": 7 } } },
+              { "id": "Q3-Sep-W3", "label": "Week 3", "values": { "americas": { "usa": 15, "can": 8, "mex": 6 }, "emea": { "gbr": 13, "deu": 11, "fra": 7 }, "apac": { "chn": 12, "jpn": 10, "aus": 6 } } },
+              { "id": "Q3-Sep-W4", "label": "Week 4", "values": { "americas": { "usa": 15, "can": 9, "mex": 6 }, "emea": { "gbr": 14, "deu": 11, "fra": 8 }, "apac": { "chn": 13, "jpn": 10, "aus": 6 } } }
+            ]
+          }
+      ]
+    },
+    {
+      "id": "Q4", "label": "Q4 2024", 
+      "values": { "americas": { "usa": 260, "can": 170, "mex": 90 }, "emea": { "gbr": 200, "deu": 160, "fra": 120 }, "apac": { "chn": 180, "jpn": 130, "aus": 90 } },
+      "children": [ 
+          { 
+            "id": "Q4-Oct", "label": "October", 
+            "values": { "americas": { "usa": 85, "can": 55, "mex": 30 }, "emea": { "gbr": 65, "deu": 55, "fra": 40 }, "apac": { "chn": 60, "jpn": 45, "aus": 30 } }, 
+            "children": [
+              { "id": "Q4-Oct-W1", "label": "Week 1", "values": { "americas": { "usa": 21, "can": 14, "mex": 7 }, "emea": { "gbr": 16, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 7 } } },
+              { "id": "Q4-Oct-W2", "label": "Week 2", "values": { "americas": { "usa": 22, "can": 14, "mex": 8 }, "emea": { "gbr": 17, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 12, "aus": 8 } } },
+              { "id": "Q4-Oct-W3", "label": "Week 3", "values": { "americas": { "usa": 21, "can": 13, "mex": 7 }, "emea": { "gbr": 16, "deu": 13, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 7 } } },
+              { "id": "Q4-Oct-W4", "label": "Week 4", "values": { "americas": { "usa": 21, "can": 14, "mex": 8 }, "emea": { "gbr": 16, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 8 } } }
+            ]
+          },
+          { 
+            "id": "Q4-Nov", "label": "November", 
+            "values": { "americas": { "usa": 90, "can": 60, "mex": 30 }, "emea": { "gbr": 70, "deu": 55, "fra": 40 }, "apac": { "chn": 60, "jpn": 45, "aus": 30 } }, 
+            "children": [
+              { "id": "Q4-Nov-W1", "label": "Week 1", "values": { "americas": { "usa": 22, "can": 15, "mex": 7 }, "emea": { "gbr": 17, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 7 } } },
+              { "id": "Q4-Nov-W2", "label": "Week 2", "values": { "americas": { "usa": 23, "can": 15, "mex": 8 }, "emea": { "gbr": 18, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 12, "aus": 8 } } },
+              { "id": "Q4-Nov-W3", "label": "Week 3", "values": { "americas": { "usa": 22, "can": 15, "mex": 7 }, "emea": { "gbr": 17, "deu": 13, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 7 } } },
+              { "id": "Q4-Nov-W4", "label": "Week 4", "values": { "americas": { "usa": 23, "can": 15, "mex": 8 }, "emea": { "gbr": 18, "deu": 14, "fra": 10 }, "apac": { "chn": 15, "jpn": 11, "aus": 8 } } }
+            ]
+          },
+          { 
+            "id": "Q4-Dec", "label": "December", 
+            "values": { "americas": { "usa": 85, "can": 55, "mex": 30 }, "emea": { "gbr": 65, "deu": 50, "fra": 40 }, "apac": { "chn": 60, "jpn": 40, "aus": 30 } }, 
+            "children": [
+              { "id": "Q4-Dec-W1", "label": "Week 1", "values": { "americas": { "usa": 21, "can": 14, "mex": 7 }, "emea": { "gbr": 16, "deu": 12, "fra": 10 }, "apac": { "chn": 15, "jpn": 10, "aus": 7 } } },
+              { "id": "Q4-Dec-W2", "label": "Week 2", "values": { "americas": { "usa": 22, "can": 14, "mex": 8 }, "emea": { "gbr": 17, "deu": 13, "fra": 10 }, "apac": { "chn": 15, "jpn": 10, "aus": 8 } } },
+              { "id": "Q4-Dec-W3", "label": "Week 3", "values": { "americas": { "usa": 21, "can": 13, "mex": 7 }, "emea": { "gbr": 16, "deu": 12, "fra": 10 }, "apac": { "chn": 15, "jpn": 10, "aus": 7 } } },
+              { "id": "Q4-Dec-W4", "label": "Week 4", "values": { "americas": { "usa": 21, "can": 14, "mex": 8 }, "emea": { "gbr": 16, "deu": 13, "fra": 10 }, "apac": { "chn": 15, "jpn": 10, "aus": 8 } } }
+            ]
+          }
+      ]
+    }
+  ]
+} 

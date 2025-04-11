@@ -1,0 +1,123 @@
+{
+  "title": "Acme Sales Report 2022",
+  "rowDimension": {
+    "id": "period",
+    "title": "Time Period",
+    "hierarchy": ["Quarter", "Month", "Week"],
+    "width": 200
+  },
+  "columnDimensions": [
+    {
+      "id": "channels",
+      "title": "Sales Channels",
+      "canCollapse": true,
+      "collapsedWidth": 200,
+      "columns": [
+        {
+          "id": "online",
+          "title": "Online",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "webStore", "title": "Web Store", "width": 90 },
+            { "id": "mobileApp", "title": "Mobile App", "width": 90 }
+          ]
+        },
+        {
+          "id": "retail",
+          "title": "Retail",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "flagship", "title": "Flagship", "width": 90 },
+            { "id": "partners", "title": "Partners", "width": 90 }
+          ]
+        },
+        {
+          "id": "wholesale",
+          "title": "Wholesale",
+          "canCollapse": true,
+          "collapsedWidth": 100,
+          "columns": [
+            { "id": "direct", "title": "Direct", "width": 90 },
+            { "id": "distributors", "title": "Distributors", "width": 90 }
+          ]
+        }
+      ]
+    }
+  ],
+  "metric": {
+    "id": "volume",
+    "title": "Sales Volume",
+    "format": "number"
+  },
+  "totalMetric": {
+    "id": "percentageOfTotal",
+    "title": "% of Total Sales",
+    "format": "percentage",
+    "width": 150
+  },
+  "rowData": [
+    {
+      "id": "Q1-2022",
+      "label": "Q1 2022",
+      "values": {
+        "online": { "webStore": 500, "mobileApp": 300 },
+        "retail": { "flagship": 400, "partners": 250 },
+        "wholesale": { "direct": 350, "distributors": 200 }
+      },
+      "children": [
+        {
+          "id": "Q1-Jan", "label": "January",
+          "values": { "online": { "webStore": 160, "mobileApp": 100 }, "retail": { "flagship": 130, "partners": 80 }, "wholesale": { "direct": 110, "distributors": 60 } },
+          "children": [
+            { "id": "Q1-Jan-W1", "label": "Week 1", "values": { "online": { "webStore": 40, "mobileApp": 25 }, "retail": { "flagship": 30, "partners": 20 }, "wholesale": { "direct": 25, "distributors": 15 } } },
+            { "id": "Q1-Jan-W2", "label": "Week 2", "values": { "online": { "webStore": 45, "mobileApp": 25 }, "retail": { "flagship": 35, "partners": 20 }, "wholesale": { "direct": 30, "distributors": 15 } } },
+            { "id": "Q1-Jan-W3", "label": "Week 3", "values": { "online": { "webStore": 35, "mobileApp": 25 }, "retail": { "flagship": 35, "partners": 20 }, "wholesale": { "direct": 25, "distributors": 15 } } },
+            { "id": "Q1-Jan-W4", "label": "Week 4", "values": { "online": { "webStore": 40, "mobileApp": 25 }, "retail": { "flagship": 30, "partners": 20 }, "wholesale": { "direct": 30, "distributors": 15 } } }
+          ]
+        },
+        {
+          "id": "Q1-Feb", "label": "February",
+          "values": { "online": { "webStore": 170, "mobileApp": 100 }, "retail": { "flagship": 140, "partners": 90 }, "wholesale": { "direct": 120, "distributors": 70 } },
+          "children": []
+        },
+        {
+          "id": "Q1-Mar", "label": "March",
+          "values": { "online": { "webStore": 170, "mobileApp": 100 }, "retail": { "flagship": 130, "partners": 80 }, "wholesale": { "direct": 120, "distributors": 70 } },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "Q2-2022",
+      "label": "Q2 2022",
+      "values": { "online": { "webStore": 600, "mobileApp": 350 }, "retail": { "flagship": 450, "partners": 300 }, "wholesale": { "direct": 400, "distributors": 220 } },
+      "children": [
+        { "id": "Q2-Apr", "label": "April", "values": { "online": { "webStore": 200, "mobileApp": 110 }, "retail": { "flagship": 150, "partners": 100 }, "wholesale": { "direct": 130, "distributors": 70 } }, "children": [] },
+        { "id": "Q2-May", "label": "May", "values": { "online": { "webStore": 200, "mobileApp": 120 }, "retail": { "flagship": 150, "partners": 100 }, "wholesale": { "direct": 140, "distributors": 80 } }, "children": [] },
+        { "id": "Q2-Jun", "label": "June", "values": { "online": { "webStore": 200, "mobileApp": 120 }, "retail": { "flagship": 150, "partners": 100 }, "wholesale": { "direct": 130, "distributors": 70 } }, "children": [] }
+      ]
+    },
+    {
+      "id": "Q3-2022",
+      "label": "Q3 2022",
+      "values": { "online": { "webStore": 550, "mobileApp": 320 }, "retail": { "flagship": 420, "partners": 280 }, "wholesale": { "direct": 380, "distributors": 210 } },
+      "children": [
+        { "id": "Q3-Jul", "label": "July", "values": { "online": { "webStore": 180, "mobileApp": 100 }, "retail": { "flagship": 140, "partners": 90 }, "wholesale": { "direct": 120, "distributors": 70 } }, "children": [] },
+        { "id": "Q3-Aug", "label": "August", "values": { "online": { "webStore": 190, "mobileApp": 110 }, "retail": { "flagship": 140, "partners": 100 }, "wholesale": { "direct": 130, "distributors": 70 } }, "children": [] },
+        { "id": "Q3-Sep", "label": "September", "values": { "online": { "webStore": 180, "mobileApp": 110 }, "retail": { "flagship": 140, "partners": 90 }, "wholesale": { "direct": 130, "distributors": 70 } }, "children": [] }
+      ]
+    },
+    {
+      "id": "Q4-2022",
+      "label": "Q4 2022",
+      "values": { "online": { "webStore": 700, "mobileApp": 400 }, "retail": { "flagship": 500, "partners": 350 }, "wholesale": { "direct": 450, "distributors": 250 } },
+      "children": [
+        { "id": "Q4-Oct", "label": "October", "values": { "online": { "webStore": 230, "mobileApp": 130 }, "retail": { "flagship": 160, "partners": 110 }, "wholesale": { "direct": 150, "distributors": 80 } }, "children": [] },
+        { "id": "Q4-Nov", "label": "November", "values": { "online": { "webStore": 240, "mobileApp": 140 }, "retail": { "flagship": 170, "partners": 120 }, "wholesale": { "direct": 150, "distributors": 90 } }, "children": [] },
+        { "id": "Q4-Dec", "label": "December", "values": { "online": { "webStore": 230, "mobileApp": 130 }, "retail": { "flagship": 170, "partners": 120 }, "wholesale": { "direct": 150, "distributors": 80 } }, "children": [] }
+      ]
+    }
+  ]
+}
