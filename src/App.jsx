@@ -21,15 +21,15 @@ function App() {
     <div className="App">
       <div className="header-container">
         <div className="data-selector">
-          <label htmlFor="data-select">Select Data: </label>
+          <label htmlFor="data-select">Select Dataset: </label>
           <select 
             id="data-select" 
             value={selectedData} 
             onChange={(e) => setSelectedData(e.target.value)}
             className="data-dropdown"
           >
-            <option value="financial">Financial Data</option>
-            <option value="acme">Acme Sales Data</option>
+            <option value="financial">Regional Performance</option>
+            <option value="acme">Sales Channels</option>
           </select>
         </div>
         <h1>{tableConfig.title || 'Dynamic Drill-Down Table'}</h1>
