@@ -1,9 +1,17 @@
+/* Reset or base styles */
+body {
+  font-family: Arial, sans-serif; /* Standard font */
+  background-color: #f8f9fa; /* Light grey background */
+  color: #202124; /* Default text color */
+  margin: 0;
+}
+
 #root {
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto; /* Center content */
   padding: 1rem;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .App {
@@ -11,95 +19,200 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #f8f9fa; /* Light grey background */
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
+/* Header and Dropdown Styles (Light Theme) */
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* Reduced margin */
+  padding: 0 1rem;
+  width: 95%;
+  max-width: 1800px; /* Keep max-width if needed */
+  justify-content: flex-start;
+}
+
 h1 {
-  color: #ffffff;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  margin: 0;
+  color: #202124; /* Dark text color */
+  margin-bottom: 0; /* Align with dropdown */
+  font-size: 1.8rem; /* Slightly smaller */
+  font-weight: 500;
   flex-grow: 1;
   text-align: center;
-  padding-left: 200px; /* Offset to maintain center alignment with the selector */
+  padding-left: 200px; /* Adjust offset if needed */
 }
+
+.data-selector {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: auto; /* Adjust width as needed */
+}
+
+.data-selector label {
+  margin-right: 8px;
+  font-weight: 400;
+  color: #5f6368; /* Grey text for label */
+  font-size: 0.9rem;
+}
+
+.data-dropdown {
+  padding: 6px 10px; /* More compact padding */
+  border-radius: 4px;
+  background-color: #ffffff; /* White background */
+  color: #202124; /* Dark text */
+  border: 1px solid #dadce0; /* Standard grey border */
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.data-dropdown:hover {
+  border-color: #a0a0a0; /* Darker grey on hover */
+}
+
+.data-dropdown:focus {
+  outline: none;
+  border-color: #4285f4; /* Blue border on focus */
+  box-shadow: 0 0 0 1px #4285f4; /* Subtle focus shadow */
+}
+
 
 /* Table container styles */
 .table-container {
-  background: #111111;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  background: #ffffff; /* White background */
+  border: 1px solid #dadce0; /* Sheets-like border */
+  border-radius: 0; /* No radius */
+  box-shadow: none; /* No shadow */
+  padding: 0; /* Remove padding */
   margin: 20px 0;
   width: 95%;
   max-width: 1800px;
-  overflow-x: auto;
+  overflow-x: auto; /* Keep horizontal scroll */
 }
 
 .drill-down-table {
   width: 100%;
-  border-collapse: separate;
+  border-collapse: collapse; /* Use collapse for Sheets look */
   border-spacing: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: 15px;
-  color: #ffffff;
+  font-family: Arial, sans-serif; /* Ensure font consistency */
+  font-size: 10pt; /* Sheets default size */
+  color: #202124; /* Default text color */
+  table-layout: fixed; /* Helps with column widths */
 }
 
+/* Cell Styling (th, td) */
 .drill-down-table th,
 .drill-down-table td {
-  padding: 16px 24px;
-  border-bottom: 1px solid #333333;
+  padding: 4px 6px; /* Compact padding like Sheets */
+  border: 1px solid #dadce0; /* Standard grey border */
   white-space: nowrap;
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Show ellipsis (...) */
+  line-height: 1.4; /* Adjust for vertical centering */
+  vertical-align: middle; /* Align text vertically */
 }
 
+/* Header Cell Styling (th) */
 .drill-down-table th {
-  background-color: #1a1a1a;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  background-color: #f8f9fa; /* Light grey header */
+  font-weight: 500; /* Medium weight */
+  color: #202124; /* Dark text */
+  text-transform: none; /* No uppercase */
+  font-size: 10pt; /* Consistent font size */
+  letter-spacing: normal; /* No letter spacing */
   position: sticky;
   top: 0;
   z-index: 1;
+  text-align: center; /* Default center align headers */
+}
+
+.drill-down-table th:first-child {
+  text-align: left; /* Align first header (row dimension) left */
+  z-index: 2; /* Keep row header above scrolling column headers */
+  left: 0; /* Stick row header to the left */
+}
+
+/* Data Cell Styling (td) */
+.drill-down-table td {
+  background-color: #ffffff; /* White background */
+  text-align: right; /* Default right align data */
+}
+
+.drill-down-table td:first-child {
+  text-align: left; /* Align first column (row labels) left */
+  background-color: #f8f9fa; /* Slightly different bg for row header */
+  position: sticky;
+  left: 0;
+  z-index: 0; /* Below column headers */
+}
+
+/* Row Styling */
+.drill-down-table tbody tr {
+  background-color: #ffffff; /* Ensure default white */
 }
 
 .drill-down-table tbody tr:hover {
-  background-color: #1a1a1a;
+  background-color: #f0f0f0; /* Slight grey hover */
 }
 
-.has-children {
-  transition: background-color 0.2s ease;
+/* Remove specific level background colors */
+.row-level-0,
+.row-level-1 {
+  background-color: inherit !important; /* Use default row background */
+  font-weight: normal; /* Reset font weight */
 }
 
-.has-children:hover {
-  background-color: #222222 !important;
+/* Style for row label cells based on level */
+.drill-down-table td:first-child {
+  /* Base style already set: sticky, left: 0, bg: #f8f9fa, text-align: left */
 }
 
+.row-level-0 > td:first-child {
+  font-weight: 500; /* Make top level row labels slightly bolder */
+  /* Color will inherit default #202124 */
+}
+
+.row-level-1 > td:first-child {
+  /* Keep default weight or make slightly lighter if needed */
+  /* Color will inherit default #202124 */
+}
+
+.row-level-2 > td:first-child {
+  /* Style for 3rd level if needed */
+  /* Color will inherit default #202124 */
+}
+
+/* Total Row Styling */
 .total-row {
-  border-top: 2px solid #333333;
-  background-color: #1a1a1a !important;
+  border-top: 2px solid #a0a0a0; /* Thicker top border */
+  background-color: #f8f9fa !important; /* Light grey background */
+  font-weight: bold; /* Make total row bold */
 }
 
 .total-row td {
-  color: #63b3ed;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: 600;
+  color: #202124; /* Standard dark text */
+  font-weight: bold; /* Ensure bold */
+  background-color: #f8f9fa; /* Match background */
 }
 
-.row-level-0 {
-  font-weight: 600;
-  background-color: #1a1a1a !important;
+.total-row td:first-child {
+  text-align: left; /* Align "Total" label left */
 }
 
-.row-level-1 {
-  font-weight: 400;
-  color: #e2e8f0;
-  background-color: #111111 !important;
+/* Expansion indicator styling */
+td > span:first-child {
+  cursor: pointer; /* Indicate clickable */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px; /* Fixed width for alignment */
+  margin-right: 4px; /* Space before label */
+  color: #5f6368; /* Grey color */
 }
 
 /* Remove unused styles */
@@ -143,46 +256,77 @@ h1 {
   color: #888;
 }
 
-.header-container {
+/* --- DrillDownTable Component Specific Styles --- */
+
+/* Alignment */
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+
+/* Font Weights */
+.font-weight-bold { font-weight: bold; }
+.font-weight-medium { font-weight: 500; }
+
+/* Row Label Cell */
+.row-label-cell {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 0 20px;
-  width: 100%;
-  max-width: 1800px;
-  justify-content: flex-start;
 }
 
-.data-selector {
-  margin-right: 20px;
-  display: flex;
+/* Expansion Indicators */
+.expand-indicator-container {
+  position: relative; /* For absolute positioning of icon */
+}
+
+.expand-indicator {
+  position: absolute;
+  left: 8px; /* Default left padding */
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex; /* Use flex for centering if needed */
   align-items: center;
-  min-width: 200px;
+  justify-content: center;
+  cursor: pointer; /* Indicate clickable */
 }
 
-.data-selector label {
-  margin-right: 10px;
-  font-weight: 500;
-  color: #e2e8f0;
+.expand-indicator-header-group {
+  left: 4px; /* Specific override for group header */
+  font-size: 10pt; /* Match table font size */
+  color: #5f6368; /* Grey color like sheets */
 }
 
-.data-dropdown {
-  padding: 8px 12px;
-  border-radius: 4px;
-  background-color: #2d3748;
-  color: #e2e8f0;
-  border: 1px solid #4a5568;
-  font-size: 14px;
-  cursor: pointer;
-  transition: border-color 0.2s;
+.expand-indicator-header-main {
+  left: 8px;
+  color: #5f6368; /* Grey color like sheets */
 }
 
-.data-dropdown:hover {
-  border-color: #63b3ed;
+.expand-indicator-row {
+  position: relative; /* Reset position */
+  left: auto; /* Reset left */
+  top: auto; /* Reset top */
+  transform: none; /* Reset transform */
+  width: 16px;
+  margin-right: 4px;
+  color: #5f6368; /* Grey color like sheets */
 }
 
-.data-dropdown:focus {
-  outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.3);
+/* Row Label Level Specific Weights */
+.row-label-level-0 { font-weight: 500; }
+
+/* Total Row Specific Cells */
+.total-row-label {
+  /* font-weight is handled by .total-row .font-weight-bold */
+  /* text-align is handled by .text-align-left */
 }
+
+.total-row-cell {
+   /* font-weight is handled by .total-row .font-weight-bold */
+   /* text-align is handled by .text-align-right */
+}
+
+/* Remove unused logo styles etc. if they are still present */
+.logo, .card, .read-the-docs {
+  display: none;
+}
+
+/* ... potentially other styles ... */
